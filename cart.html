@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #4caf50;
+        }
+        .cart-items {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            padding: 20px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            text-align: right;
+        }
+        .checkout-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .checkout-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="total" id="total-price"></div>
+    <a href="store.html" class="checkout-button">Continue Shopping</a>
+    
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemsDiv = document.getElementById('cart-items');
+        const totalPriceDiv = document.getElementById('total-price');
+        
+        if (cart.length === 0) {
+            cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+        } else {
+            let totalPrice = 0;
+            cart.forEach(item => {
+                cartItemsDiv.innerHTML += `<div class="cart-item">
+                    <span>${item.name}</span>
+                    <span>$${item.price}</span>
+                </div>`;
+                totalPrice += parseFloat(item.price);
+            });
+            totalPriceDiv.innerHTML = `Total: $${totalPrice.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

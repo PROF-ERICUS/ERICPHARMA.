@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="description" content="Welcome to EricPharma, your trusted pharmacy store for all health and medication needs.">
     <title>Pharmacy Store - Cover Page</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-        
+        /* Base styling */
         body, html {
             height: 100%;
             margin: 0;
-            font-family: Arial, sans-serif;
-            
+            font-family: Arial, system-ui, sans-serif;
         }
 
+        /* Cover container styling */
         .cover-container {
             height: 100%;
-            background-image: url(proimages/backcover.jpg);
+            background-image: url('proimages/backcover-lowres.jpg'); /* Placeholder */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -28,6 +29,12 @@
             animation: fadeIn 3s ease-in-out forwards;
         }
 
+        /* High-res image fallback (progressive loading) */
+        .cover-container.loaded {
+            background-image: url('proimages/backcover.jpg');
+        }
+
+        /* Animations */
         @keyframes fadeIn {
             0% {
                 opacity: 0;
@@ -35,14 +42,6 @@
             100% {
                 opacity: 1;
             }
-        }
-
-        .cover-content {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 30px;
-            border-radius: 10px;
-            opacity: 0;
-            animation: fadeContent 2s ease-in-out forwards 1s;
         }
 
         @keyframes fadeContent {
@@ -54,12 +53,6 @@
             }
         }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            animation: slideIn 1s ease-out forwards 1.5s;
-        }
-
         @keyframes slideIn {
             0% {
                 transform: translateY(-50px);
@@ -67,12 +60,6 @@
             100% {
                 transform: translateY(0);
             }
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            animation: fadeInText 2s ease-in-out forwards 2s; 
         }
 
         @keyframes fadeInText {
@@ -84,6 +71,38 @@
             }
         }
 
+        @keyframes bounceButton {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Cover content styling */
+        .cover-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            opacity: 0;
+            animation: fadeContent 2s ease-in-out forwards 1s;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-out forwards 1.5s;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: fadeInText 2s ease-in-out forwards 2s;
+        }
+
+        /* Button styling */
         .enter-button {
             padding: 15px 30px;
             font-size: 1.5rem;
@@ -97,19 +116,11 @@
             animation: bounceButton 2s ease-in-out forwards 3s;
         }
 
-        @keyframes bounceButton {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
         .enter-button:hover {
             background-color: #45a049;
         }
 
+        /* Footer styling */
         footer {
             background-color: #333;
             color: white;
@@ -117,18 +128,35 @@
             padding: 1rem;
             margin-top: 2rem;
         }
-
     </style>
 </head>
 <body>
-
     <div class="cover-container">
         <div class="cover-content">
             <h1>Welcome to EricPharma</h1>
             <p>Your health, our priority. Find the best medications for your needs.</p>
-            <a href="index.html" class="enter-button">Next</a>
+            <a href="index.html" class="enter-button" aria-label="Go to the next page">Next</a>
         </div>
     </div>
 
+    <!-- Placeholder for low-res background image -->
+    <img src="proimages/backcover-lowres.jpg" alt="Pharmacy Store Background" style="display: none;" aria-hidden="true">
+
+    <!-- Footer -->
+    <footer>
+        © 2024 EricPharma. All rights reserved.
+    </footer>
+
+    <!-- Lazy loading high-res image -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector('.cover-container');
+            const highResImage = new Image();
+            highResImage.src = 'proimages/backcover.jpg';
+            highResImage.onload = () => {
+                container.classList.add('loaded');
+            };
+        });
+    </script>
 </body>
 </html>

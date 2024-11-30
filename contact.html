@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <title>Pharmacy Store</title>
     <style>
-    
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding-top: 100px;
+            padding-top: 100px; /* Adjust for the fixed header */
             background-color: #f9f9f9;
             background-image: url(proimages/surg.jpg);
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-position: center; /* Center the background image */
         }
 
         header {
@@ -31,6 +31,7 @@
             display: flex;
             justify-content: center;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li {
@@ -131,7 +132,6 @@
         </nav>
     </header>
     
-
     <main>
         <section id="contact">
             <h3>Contact Us</h3>
@@ -151,26 +151,22 @@
         <p>&copy; 2024 Pharmacy Store. All Rights Reserved.</p>
     </footer>
 
-    
     <script>
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault();
             
-        
             const name = event.target.name.value.trim();
             const email = event.target.email.value.trim();
             const message = event.target.message.value.trim();
 
             if (name && email && message) {
                 alert(`Thank you, ${name}! We have received your message.`);
-                
                 event.target.reset();
             } else {
                 alert("Please fill in all fields.");
             }
         });
     </script>
-
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </body>

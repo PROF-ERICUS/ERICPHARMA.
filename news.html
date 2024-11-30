@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <title>Pharmacy Store - News</title>
     <style>
         body {
@@ -12,6 +11,7 @@
             padding-top: 100px; /* Space for fixed header */
             background-color: #f9f9f9;
             background-image: url(proimages/first.jpg);
+            background-size: cover; /* Make the background cover the whole page */
         }
 
         header {
@@ -56,11 +56,12 @@
             margin: 0 auto;
         }
 
-        .news-item1, .news-item2, .news-item3 {
+        .news-item {
             padding: 1rem;
             margin: 1rem 0;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333;
         }
 
         .news-item1 {
@@ -74,12 +75,11 @@
         }
 
         .news-item h4 {
-            color: #333;
             margin-bottom: 0.5rem;
         }
 
         .news-item p {
-            color: #666;
+            color: #f8f4f4;
             font-size: 1rem;
             margin-bottom: 1rem;
         }
@@ -91,14 +91,27 @@
             padding: 1rem;
             margin-top: 2rem;
         }
-        
 
+        /* Responsive Styles */
         @media (max-width: 600px) {
             nav ul {
                 flex-direction: column;
-                
+                padding: 0;
             }
-            
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .news-item {
+                padding: 1rem 0.5rem; /* Reduce padding on smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .news-item h4 {
+                font-size: 1.2rem; /* Slightly smaller headings */
+            }
         }
     </style>
 </head>
@@ -121,17 +134,17 @@
         <section id="news">
             <h2>Latest News</h2>
 
-            <div class="news-item1">
+            <div class="news-item news-item1">
                 <h4>New Drug Available: Paracetamol 500mg</h4>
                 <p>We are excited to announce that Paracetamol 500mg is now available at our store. Get yours today at a discounted price!</p>
             </div>
 
-            <div class="news-item2">
+            <div class="news-item news-item2">
                 <h4>Exclusive Sale on Over-the-Counter Medications</h4>
                 <p>Our biggest sale of the season! All over-the-counter medications are 15% off. Visit us today to save on your health essentials.</p>
             </div>
 
-            <div class="news-item3">
+            <div class="news-item news-item3">
                 <h4>New Location Opening Soon!</h4>
                 <p>We are expanding! Our new pharmacy location will be opening in Downtown on December 1st. Stay tuned for more details.</p>
             </div>
@@ -142,10 +155,9 @@
 
     <footer>
         <p>&copy; 2024 Pharmacy Store. All Rights Reserved.</p>
-        <!-- Optional: Add links to social media or other pages -->
         <p>
             <a href="https://wa.link/zwhfb8" target="_blank">WhatsApp</a> |
-            <a href="https://www.facebook.com/eric.andoh.75641?mibextid=ZbWKwL" target="_blank">facebook</a> |
+            <a href="https://www.facebook.com/eric.andoh.75641?mibextid=ZbWKwL" target="_blank">Facebook</a> |
             <a href="https://www.instagram.com/ericushercules005?igsh=YzljYTk1ODg3Zg==" target="_blank">Instagram</a>
         </p>
     </footer>

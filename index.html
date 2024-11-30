@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Pharmacy Store</title>
     <style>
-        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding-top: 100px;
+            padding-top: 100px; /* Space for fixed header */
             background-image: url(proimages/doc.jpg);
             background-size: cover; 
             background-position: center;
-            background-attachment: fixed; 
+            background-attachment: fixed;
             color: #333;
         }
 
-    
         header {
             background-color: #4caf50;
             color: white;
@@ -46,7 +43,7 @@
             text-decoration: none;
             color: white;
             font-size: 1.2rem;
-            transition: color 0.3s; 
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
@@ -59,9 +56,8 @@
         }
 
         section h2, section h3 {
-            color: #10d510; 
+            color: #10d510;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            
         }
 
         form {
@@ -88,6 +84,17 @@
             background-color: #45a049;
         }
 
+        marquee {
+            margin-top: 2rem;
+        }
+
+        marquee img {
+            height: auto;
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 0 10px;
+        }
+
         footer {
             background-color: #45a049;
             color: white;
@@ -98,7 +105,6 @@
 
         footer p {
             margin: 0;
-            
         }
 
         @media (max-width: 600px) {
@@ -113,7 +119,7 @@
             }
 
             form input, form button {
-                width: 90%; 
+                width: 90%;
             }
         }
     </style>
@@ -130,7 +136,6 @@
                 <li><a href="news.html">News</a></li>
             </ul>
         </nav>
-       
     </header>
 
     <main>
@@ -152,24 +157,19 @@
             </form>
         </section>
     </main>
-    <marquee behavior="scroll" direction="left">
-        <table>
-            <tr>
-                
-        <td><img src="proimages/backcover.jpg" height="300" width="300"></td>
-         <td><img src="proimages/surg.jpg" height="300" width="300"></td>
-         <td><img src="proimages/heart.jpg" height="300" width="300"></td>
-         <td><img src="proimages/liver.jpg" height="300" width="300"></td>
 
-         </tr>
-         </table>
-        </marquee>
+    <marquee behavior="scroll" direction="left">
+        <img src="proimages/nurse.jpg" alt="Backcover Medicine">
+        <img src="proimages/surg.jpg" alt="Surgical Tools">
+        <img src="proimages/heart.jpg" alt="Heart Medication">
+        <img src="proimages/preci.jpg" alt="Liver Medication">
+    </marquee>
 
     <footer>
         <p>&copy; 2024 Pharmacy Store. All Rights Reserved.</p>
         <p>
             <a href="https://wa.link/zwhfb8" target="_blank">WhatsApp</a> |
-            <a href="https://www.facebook.com/eric.andoh.75641?mibextid=ZbWKwL" target="_blank">facebook</a> |
+            <a href="https://www.facebook.com/eric.andoh.75641?mibextid=ZbWKwL" target="_blank">Facebook</a> |
             <a href="https://www.instagram.com/ericushercules005?igsh=YzljYTk1ODg3Zg==" target="_blank">Instagram</a>
         </p>
     </footer>

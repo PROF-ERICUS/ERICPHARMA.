@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Pharmacy Store - News</title>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            background-image: url(proimages/first.jpg);
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #news {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .news-item1 {
+            background-color: rgb(18, 181, 226);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Geneva, Verdana, Tahoma, sans-serif;
+        }
+        .news-item2 {
+            background-color: rgb(240, 209, 7);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .news-item3 {
+            background-color: rgb(218, 7, 116);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .news-item h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-item p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pharmacy Store - News</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="news.html">News</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="news">
+            <h2>Latest News</h2>
+
+            
+            <div class="news-item1">
+                <h4>New Drug Available: Paracetamol 500mg</h4>
+                <p>We are excited to announce that Paracetamol 500mg is now available at our store. Get yours today at a discounted price!</p>
+            </div>
+
+            
+            <div class="news-item2">
+                <h4>Exclusive Sale on Over-the-Counter Medications</h4>
+                <p>Our biggest sale of the season! All over-the-counter medications are 15% off. Visit us today to save on your health essentials.</p>
+            </div>
+
+        
+            <div class="news-item3">
+                <h4>New Location Opening Soon!</h4>
+                <p>We are expanding! Our new pharmacy location will be opening in Downtown on December 1st. Stay tuned for more details.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pharmacy Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

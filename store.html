@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Pharmacy Store</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .drug-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+            
+        }
+
+        .drug-item {
+            width: 250px; 
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .drug-item img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .drug-item {
+                width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Available Drugs</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Drug List</h2>
+            <div class="drug-list">
+                <div class="drug-item">
+                    <img src="proimages/para.jpg" alt="Paracetamol">
+                    <h3>Paracetamol</h3>
+                    <p>Used for pain relief and fever reduction.</p>
+                    <p><strong>Price:</strong> $5</p>
+                    <a href="cart.html" class="buy-button">Buy</a>
+                </div>
+                <div class="drug-item">
+                    <img src="proimages/condom.jpg" alt="condom">
+                    <h3>Ibuprofen</h3>
+                    <p>help prevent pregnancy and reduce the risk of sexually transmitted infections (STIs).</p>
+                    <p><strong>Price:</strong> $7</p>
+                    <a href="cart.html" class="buy-button">Buy</a>
+                </div>
+                <div class="drug-item">
+                    <img src="proimages/Aspirin.jpg" alt="Aspirin">
+                    <h3>Aspirin</h3>
+                    <p>Relieves pain, fever, and inflammation.</p>
+                    <p><strong>Price:</strong> $3</p>
+                    <a href="cart.html" class="buy-button">Buy</a>
+                </div>
+                <div class="drug-item">
+                    <img src="proimages/liver.jpg" alt="Liver Tonic">
+                    <h3>Liver Tonic</h3>
+                    <p>Used for the treatment of fatty liver disease and helps in its proper functioning.</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <a href="cart.html" class="buy-button">Buy</a>
+                </div>
+           
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pharmacy Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

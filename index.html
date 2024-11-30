@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pharmacy Store</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(proimages/doc.jpg);
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed; 
+            color: #333;
+        }
+
+    
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s; 
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        section h2, section h3 {
+            color: #10d510; 
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        form {
+            margin-top: 1rem;
+        }
+
+        form input, form button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            margin: 0.5rem;
+            border: 1px solid #080909;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #e8f0e8;
+            color: rgb(14, 111, 248);
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            form input, form button {
+                width: 90%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><em>Welcome to Our Pharmacy</em></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="news.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Your Health, Our Priority</h2>
+            <p>Find your prescribed drugs easily and quickly with us.</p>
+        </section>
+        <section>
+            <h3>Search for Drugs</h3>
+            <form action="store.html" method="get">
+                <input 
+                    type="text" 
+                    name="search" 
+                    placeholder="Enter drug name" 
+                    required 
+                    aria-label="Search for a drug"
+                >
+                <button type="submit">Search</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pharmacy Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pharmacy Store - Cover Page</title>
+    <style>
+        
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+        }
+
+        .cover-container {
+            height: 100%;
+            background-image: url(proimages/backcover.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(236, 236, 237);
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .cover-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            opacity: 0;
+            animation: fadeContent 2s ease-in-out forwards 1s;
+        }
+
+        @keyframes fadeContent {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-out forwards 1.5s;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: fadeInText 2s ease-in-out forwards 2s; 
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .enter-button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #4caf50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            animation: bounceButton 2s ease-in-out forwards 3s;
+        }
+
+        @keyframes bounceButton {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .enter-button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cover-container">
+        <div class="cover-content">
+            <h1>Welcome to EricPharma</h1>
+            <p>Your health, our priority. Find the best medications for your needs.</p>
+            <a href="index.html" class="enter-button">Next</a>
+        </div>
+    </div>
+
+</body>
+</html>
